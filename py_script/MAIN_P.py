@@ -13,7 +13,7 @@ from sklearn.decomposition import  PCA
 from sklearn.cluster import KMeans
 from sklearn.metrics import calinski_harabasz_score
 
-sys.path.append('/home/presh/Downloads/Electricity_consumption/py_script')
+sys.path.append('.../Electricity_consumption/py_script')
 from Utilss import extract_time, num_to_word, user_input_features, cluster_mapper
 from PAGE1 import func_page_1
 
@@ -60,10 +60,10 @@ def main_page():
     if data_file is not None:
         data = pd.read_csv(data_file)
     else:
-        os.chdir('/home/presh/Downloads/Electricity_consumption/pickles')
+        os.chdir('.../Electricity_consumption/pickles')
         with open('data.pickle', 'rb') as gh:
              data = pickle.load(gh)
-    os.chdir('/home/presh/Downloads/Electricity_consumption/py_script')
+    os.chdir('.../Electricity_consumption/py_script')
     st.dataframe(data.head(5))
     st.write('')
 

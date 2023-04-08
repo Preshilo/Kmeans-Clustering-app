@@ -11,7 +11,7 @@ from sklearn.decomposition import PCA
 from datetime import datetime, timedelta
 from sklearn.cluster import KMeans
 
-sys.path.append('/home/presh/Downloads/Electricity_consumption/py_script')
+sys.path.append('.../py_script')
 from Utilss import extract_time, num_to_word, user_input_features, cluster_mapper, cluster_predict
 
 def func_page_1():

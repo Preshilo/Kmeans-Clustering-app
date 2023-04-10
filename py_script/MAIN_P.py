@@ -80,7 +80,7 @@ def main_page():
             st.sidebar.info(f'Cached columnn name user_id : {cached_user_id}')
             feature_data = data.loc[:, data.columns != cached_user_id]
             df_col_name = feature_data.columns
-            x = np.asarray(num_features) #Seleting all features columns except the user_id columnn
+            x = np.asarray(feature_data) #Seleting all features columns except the user_id columnn
             x = StandardScaler().fit_transform(x)
             pca = PCA().fit(x)
             st.session_state['pca'] = pca

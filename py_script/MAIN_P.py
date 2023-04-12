@@ -146,7 +146,7 @@ def main_page():
             amount of the information (explained variance) present in the initial dataset...""")
 
     st.session_state['pca3'] = pca3
-    st.session_state['pca-features'] = pca_features
+    st.session_state['pca_features'] = pca_features
     st.session_state['pca_df'] = pca_df
 
     st.subheader('Cluster Analysis')

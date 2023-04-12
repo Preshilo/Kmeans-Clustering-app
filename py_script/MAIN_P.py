@@ -73,9 +73,7 @@ def main_page():
     st.sidebar.markdown("***NOTE:*** Enter *NIL* if there's no column for user identity")
 
     if user_id == "":
-        st.info("You haven't entered a user_id columnn")
         if 'cached_user_id' in st.session_state:
-            st.info('cached_id returned')
             cached_user_id = st.session_state['cached_user_id']
             st.sidebar.info(f'Cached columnn name user_id : {cached_user_id}')
             feature_data = data.loc[:, data.columns != cached_user_id]
